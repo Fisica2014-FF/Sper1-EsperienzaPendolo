@@ -1,0 +1,48 @@
+Compatibilità
+lambda = abs(a-b)/sqrt(sigmaa^2+sigmab^2);
+se a=U±sigmaMediaU b=a/2±
+lambda = abs(a-)/sqrt(sigmaa^2+sigmab^2);
+
+Deviazione standard diversa da precisione strumenti;
+
+su una singola misura ci si può limitare ad 1 cifra significativa
+sull'errore sigma
+
+è accettato
+sigma = 0.04 secondi
+
+RELAZIONE
+presentazione dati (tabellegrafici)
+
+analisi
+dati
+	risultati e discussione
+
+Conclusioni
+
+Esercizio
+t>0
+f(t) = dp/dt = k*e^(-b*t)
+k £ R
+b>0
+Stimare E(t), var(t)
+
+Soluzione
+
+Normalizzazione
+Int(k*e^)=1  ... => k=b
+
+#define _f(X) b*e^(-b*X)
+#define _E( X, N ) Int( X^N*_f(X) , -INF, INF)
+
+E(t) = 1/b*Int(x*_f(t),0,_PINF) ... => E(t) = 1/b
+
+E(t^2) 
+
+#undef _f(x)
+#undef _E(t)
+
+Esercizio 2
+
+x £ R
+E(t) 

@@ -1,0 +1,8 @@
+
+# SCRIPT FATTO MANUALMENTE
+# Disegna la serie temporale delle 990 misure
+
+set autoscale
+set terminal png
+set output "./Gnuplot/immagini/grafico_990_misure.png"
+plot "./formatteddata/990mis.formdat" using 0:1 with lines linetype rgb "blue"

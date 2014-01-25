@@ -1,0 +1,128 @@
+Programma per analizzare i dati del pendolo, versione: 3
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Apro il file di dati: 
+
+formatteddata/1osc.formdat
+
+Dati letti. Analizzo...
+
+Elimino i dati oltre 3 sigma...
+Cancellati 0 dati
+
+Numero dati: 100
+Media: 2.03363
+varianza del campione: 0.00761839
+Deviazione standard campione: 0.0872834
+Varianza della popolazione: 0.00769535
+Deviazione standard popolazione: 0.0877231
+Errore della media: 0.00877231
+Massimo: 2.257
+Minimo: 1.803
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Apro il file di dati: 
+
+formatteddata/2osc.formdat
+
+Dati letti. Analizzo...
+
+Elimino i dati oltre 3 sigma...
+Cancellati 0 dati
+
+Numero dati: 50
+Media: 4.05086
+varianza del campione: 0.00502576
+Deviazione standard campione: 0.0708926
+Varianza della popolazione: 0.00512833
+Deviazione standard popolazione: 0.0716123
+Errore della media: 0.0101275
+Massimo: 4.181
+Minimo: 3.91
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Apro il file di dati: 
+
+formatteddata/4osc_con_dati_errati.formdat
+
+Dati letti. Analizzo...
+
+Elimino i dati oltre 3 sigma...
+Eliminato dato: -250.123
+Cancellati 1 dati
+
+Numero dati: 25
+Media: 8.12808
+varianza del campione: 0.0139322
+Deviazione standard campione: 0.118035
+Varianza della popolazione: 0.0145127
+Deviazione standard popolazione: 0.120469
+Errore della media: 0.0240938
+Massimo: 8.341
+Minimo: 7.849
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Apro il file di dati: 
+
+formatteddata/4osc.formdat
+
+Dati letti. Analizzo...
+
+Elimino i dati oltre 3 sigma...
+Cancellati 0 dati
+
+Numero dati: 25
+Media: 8.12808
+varianza del campione: 0.0139322
+Deviazione standard campione: 0.118035
+Varianza della popolazione: 0.0145127
+Deviazione standard popolazione: 0.120469
+Errore della media: 0.0240938
+Massimo: 8.341
+Minimo: 7.849
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Apro il file di dati: 
+
+formatteddata/990mis.formdat
+
+Dati letti. Analizzo...
+
+Elimino i dati oltre 3 sigma...
+Cancellati 0 dati
+
+Numero dati: 990
+Media: 2.03204
+varianza del campione: 1.73291e-06
+Deviazione standard campione: 0.0013164
+Varianza della popolazione: 1.73467e-06
+Deviazione standard popolazione: 0.00131707
+Errore della media: 4.18591e-05
+Massimo: 2.0358
+Minimo: 2.0299
+
+
+RILEVATO FILE 990mis
+Analisi classi di 10 classi di dati
+
+
+
+Compatibilità tra la 2a e 1a classe: 2.30285
+
+Compatibilità tra la 3a e 2a classe: 2.41331
+
+Compatibilità tra la 4a e 3a classe: 2.05983
+
+Compatibilità tra la 5a e 4a classe: 2.14042
+
+Compatibilità tra la 6a e 5a classe: 2.08857
+
+Compatibilità tra la 7a e 6a classe: 1.83129
+
+Compatibilità tra la 8a e 7a classe: 1.2145
+
+Compatibilità tra la 9a e 8a classe: 1.03665
+
+Compatibilità tra la 10a e 9a classe: 1.26702
+
+Compatibilità tra la prima e l'ultima classe: 9.1526

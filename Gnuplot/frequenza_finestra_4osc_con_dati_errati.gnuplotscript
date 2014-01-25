@@ -1,0 +1,30 @@
+# TEMPLATE! File da compilarecon uno script che sostituisca ai token le variabili effettive
+# Un nome tra doppi underscore, __NOME__, indica un token da sostituire con un dato
+# Token indicati in questo template: PATHDATI, MAX, MIN, MEDIA, SIGMAP, NUMDATI, NOMEDATI
+# File per fare le immagini
+# set autoscale 
+
+set title "Distribuzione dei dati: 4osc_con_dati_errati"
+set xlabel "Misure"
+set ylabel "N° di misure nell'intervallo"
+
+minimo = 7.849
+massimo = 8.341
+
+set xrange [minimo:massimo]
+
+set terminal x11
+
+larghezza_intervallo = (massimo - minimo)/10.0
+_PI = 3.141
+media = 8.12808
+sigmap = 0.118035
+numdati = 25
+
+numeromis_in_intervallo(x) = floor(x/larghezza_intervallo)
+rounded(x) = larghezza_intervallo * ( numeromis_in_intervallo(x) + 0.5 )
+
+gauss(x) = numdati*larghezza_intervallo/(sqrt(2*_PI)*sigmap)*exp( (-1.0/2.0*((media-x)/sigmap)**2 ) )
+
+plot "./formatteddata/4osc_con_dati_errati.formdat" using (rounded($1)):(1) smooth frequency with boxes, \
+gauss(x)

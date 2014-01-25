@@ -1,0 +1,31 @@
+# TEMPLATE! File da compilarecon uno script che sostituisca ai token le variabili effettive
+# Un nome tra doppi underscore, __NOME__, indica un token da sostituire con un dato
+# Token indicati in questo template: PATHDATI, MAX, MIN, MEDIA, SIGMAP, NUMDATI, NOMEDATI
+# File per fare le immagini
+# set autoscale 
+
+set title "Distribuzione dei dati: 1osc"
+set xlabel "Misure"
+set ylabel "N° di misure nell'intervallo"
+
+minimo = 1.803
+massimo = 2.257
+
+set xrange [minimo:massimo]
+
+set terminal png
+set output "./Gnuplot/immagini/1osc_frequenza.png"
+
+larghezza_intervallo = (massimo - minimo)/10.0
+_PI = 3.141
+media = 2.03363
+sigmap = 0.0872834
+numdati = 100
+
+numeromis_in_intervallo(x) = floor(x/larghezza_intervallo)
+rounded(x) = larghezza_intervallo * ( numeromis_in_intervallo(x) + 0.5 )
+
+gauss(x) = numdati*larghezza_intervallo/(sqrt(2*_PI)*sigmap)*exp( (-1.0/2.0*((media-x)/sigmap)**2 ) )
+
+plot "./formatteddata/1osc.formdat" using (rounded($1)):(1) smooth frequency with boxes, \
+gauss(x)

@@ -43,7 +43,7 @@ public:
 		for(int i=0; i < numDati; i++){
 			//Varianza
 			dVarianzaCampione=(i*dVarianzaCampione+pow(((double)vectDati[i]-dMedia),2)) /
-					(i+1);
+								(i+1);
 		}
 
 		dDeviazioneStandardCamp = sqrt(dVarianzaCampione);
@@ -106,7 +106,7 @@ public:
 			for(int i=0; i < numDati; i++) {
 				//Varianza
 				dVarianzaCampione=(i*dVarianzaCampione+pow(((double)vectDati[i]-dMedia),2)) /
-						(i+1);
+								  (i+1);
 			}
 			dDeviazioneStandardCamp = sqrt(dVarianzaCampione);
 
@@ -152,7 +152,7 @@ public:
 	double getMax() const {return dMax;}
 	double getMin() const {return dMin;}
 	//TODO: If a basso costo per via della BPU
-	double getErroreMedia() {return (dErroreMedia != 0 ? dErroreMedia : dErroreMedia = getVarianzaPopolazione() / getNumeroDatiEffettivo());}
+	double getErroreMedia() {return (dErroreMedia != 0 ? dErroreMedia : dErroreMedia = getDeviazioneStandardPop() / sqrt(getNumeroDatiEffettivo()));}
 	long getNumeroDatiEffettivo() const {return vectDati.size();}
 	//double getModa() const {return dModa;}
 

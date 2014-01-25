@@ -67,7 +67,7 @@ int main(int numParam, char* args[]) {
 		cout << e << endl;
 		return -2;
 	}
-	//cout << "\n";
+	cout << "\n";
 	return 0;
 }
 /**legge il file di dati formattato "NomeFile" e analizza i dati ivi contenuti
@@ -80,7 +80,6 @@ inline void leggiFile(char const * const NomeFile) throw(std::string){
 
 	fstream FileDati;//FileStream
 
-	cout << "\n\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n";
 	cout << "Apro il file di dati: \n\n";
 	cout << NomeFile << endl << endl;
 	FileDati.open(NomeFile, fstream::in | fstream::out);//Apro il file indicato nell'argomento dato via shell
@@ -132,7 +131,7 @@ inline void leggiFile(char const * const NomeFile) throw(std::string){
 			FileDati >> dato;
 	}
 	else if (formato == "D,I") {
-		// File csv, comma separated values. In questo caso un double e un int separati da una virgola
+	// File csv, comma separated values. In questo caso un double e un int separati da una virgola
 		int _i;
 		char _sep;
 		for (double& dato : dati)
@@ -152,8 +151,8 @@ inline void leggiFile(char const * const NomeFile) throw(std::string){
 
 	cout << "Numero dati: " << AnDat.getNumeroDatiEffettivo() << endl;
 	cout << "Media: "<< AnDat.getMedia() << endl;
-	//cout << "Mediana: "<< AnDat.getMediana() << endl;
-	cout << "Varianza del campione: " << AnDat.getVarianzaCampione() << endl;
+	cout << "Mediana: "<< AnDat.getMediana() << endl;
+	cout << "varianza del campione: " << AnDat.getVarianzaCampione() << endl;
 	cout << "Deviazione standard campione: " << AnDat.getDeviazioneStandardCamp() << endl;
 	cout << "Varianza della popolazione: " << AnDat.getVarianzaPopolazione() << endl;
 	cout << "Deviazione standard popolazione: " << AnDat.getDeviazioneStandardPop() << endl;
@@ -161,19 +160,18 @@ inline void leggiFile(char const * const NomeFile) throw(std::string){
 	cout << "Massimo: "<< AnDat.getMax() << endl;
 	cout << "Minimo: "<< AnDat.getMin() << endl;
 
-	//Se è il file dell 990 misure dividilo in clasi e analizzalo
 	if (string(NomeFile).find("990mis") != string::npos) {
-		cout << "\n\nRILEVATO FILE 990mis" << endl;
-		cout << "Analisi classi di 10 classi di dati\n" << endl;
+		cout << "RILEVATO FILE 990mis" << endl;
+		cout << "Analisi classi di 10 classi di dati" << endl;
 
 		//Array delle classi
 		vector<vector<double> > classiDati;
 		classiDati.reserve(10);
 
-		//Riempi le 10 classi
+		//Riempi le classi
 		double media_attuale = 0;
 		double sigma2p_attuale = 0;//Varianza (N-1)
-		//long numero_mis_attuale = 0;
+		long numero_mis_attuale = 0;
 		for(int i = 0; i < 10; i++) {
 			cout << "" << endl;
 			vector<double> TempVect(dati.begin() + 99 * i, dati.begin() + 99 * (i+1));
@@ -183,33 +181,18 @@ inline void leggiFile(char const * const NomeFile) throw(std::string){
 			//Misure precedenti
 			double media_precedente = media_attuale;
 			double sigma2p_precedente = sigma2p_attuale;//Varianza (N-1)
-			//long numero_mis_precedente = numero_mis_attuale;
+			long numero_mis_precedente = numero_mis_attuale;
 
 			//Misure attuali
 			media_attuale = AnDatClassi.getMedia();
 			sigma2p_attuale = AnDatClassi.getVarianzaPopolazione();
-			//numero_mis_attuale = AnDatClassi.getNumeroDatiEffettivo();
+			numero_mis_attuale = AnDatClassi.getNumeroDatiEffettivo();
 
-			//cout << "Media classe " << i+1 << ": " << AnDatClassi.getMedia() << endl;
+			cout << "Media classe " << i+1 << ": " << AnDatClassi.getMedia() << endl;
 
-			//Memorizza i dati della prima classe
-			double sigma2p_prima;
-			double media_prima;
-			if (i==0) {
-				sigma2p_prima = sigma2p_attuale;
-				media_prima = media_attuale;
-			}
-
-			//Analizza la compatibilità fra classi contigue
-			if (i>0) {
-				double compatibilita = abs(media_attuale - media_precedente) / sqrt(sigma2p_attuale + sigma2p_precedente);
-				cout << "Compatibilità tra la " << i+1 << "a e " << i << "a classe: " << compatibilita << endl;
-			}
-
-			//Alla fine confronta la prima e l'ultima
-			if (i==9) {
-				double compatibilita_prima_ultima = abs(media_prima - media_attuale) / sqrt(sigma2p_prima + sigma2p_attuale);
-				cout << "\nCompatibilità tra la prima e l\'ultima classe: " << compatibilita_prima_ultima << endl;
+			if (i+1>1) {
+				double compatibilita = abs(media_attuale - media_precedente) / sqrt(sigma2p_attuale/numero_mis_attuale/*errore della media*/ + sigma2p_precedente/numero_mis_precedente);
+				cout << "Compatibilità tra la " << i+2 << "a e " << i+1 << "a classe: " << compatibilita;
 			}
 		}
 	}
