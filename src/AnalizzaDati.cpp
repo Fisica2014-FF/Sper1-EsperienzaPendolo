@@ -5,6 +5,9 @@
 // Description : Programma per analizzare i dati sul pendolo raccolti in laboratorio
 //============================================================================
 
+// VERSIONE PER I COMPAGNI DEL GRUPPO!!! NON CONSEGNARE QUESTA!!!!
+// Quando scrivo TODO: è perchè con eclipse dopo mi consente di trovare i commenti da togliere più in fretta
+
 /////////////////////////////////////////////////////////////////////////////////////
 //Librerie
 #include <iostream>//cin e cout
