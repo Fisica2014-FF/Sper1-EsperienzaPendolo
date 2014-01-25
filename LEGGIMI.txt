@@ -1,0 +1,15 @@
+Ho usato il C++11, quindi per compilare dovete mettere la flag del compilatore "-std=c++11".
+Nel file "Verifica correttezza programma con dati 4osc.ods" ho analizzato i dati
+con lo spreadsheet tipo Excel
+Esempi:
+
+cd /(quel che è)/EsperienzaPendolo/
+g++ ./src/AnalizzaDati.cpp -o AnalizzatoreDati -O3 -std=c++11
+./AnalizzatoreDati ./formatteddata/cronodolo.formdat
+./AnalizzatoreDati ./formatteddata/*
+./AnalizzatoreDati
+cat ./formatteddata/1osc.formdat | ./AnalizzatoreDati
+
+Con gli ultimi esempi senza argomenti, potete inserire voi i dati a mano 
+(o leggerli da una pipe), ma ricordatevi se li mettete a mano di scriverne il formato e il numero 
+all'inizio

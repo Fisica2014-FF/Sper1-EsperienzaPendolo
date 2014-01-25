@@ -1,0 +1,26 @@
+# set autoscale  
+
+set title "Distribuzione dei dati"
+set xlabel "Misure"
+set ylabel "N° di misure nell'intervallo"
+
+massimo = 2.0358
+minimo = 2.0299
+
+set xrange [1.5:2.5]
+set yrange [0:400]
+
+larghezza_intervallo = (massimo - minimo)/10.0
+_PI = 3.141
+media = 2.03204
+sigmap = 0.00131707
+sigmac = 0.0013164
+
+
+numeromis_in_intervallo(x) = floor(x/larghezza_intervallo)
+
+rounded(x) = larghezza_intervallo * ( numeromis_in_intervallo(x) + 0.5 )
+
+plot "./rawdata/cronodolo.csv" using (rounded($1)):(1) \
+smooth frequency with boxes, \
+1/(sqrt(2*_PI)*sigmap)*exp( (-1/2*((media-x)/sigmap)**2 ) )

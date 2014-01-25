@@ -1,0 +1,34 @@
+# TEMPLATE! File da compilarecon uno script che sostituisca ai token le variabili effettive
+# Un nome tra doppi underscore, __NOME__, indica un token da sostituire con un dato
+# Token indicati in questo template: NOMEFILE, MAX, MIN, MEDIA, SIGMAP
+
+set autoscale 
+
+set title "Distribuzione dei dati: __NOMEFILE__"
+set xlabel "Misure"
+set ylabel "N° di misure nell'intervallo"
+
+massimo = __MAX__
+minimo = __MIN__
+
+# set xrange [__MIN__:__MAX__]
+
+larghezza_intervallo = (massimo - minimo)/10.0
+_PI = 3.141
+media = __MEDIA__
+sigmap = __SIGMAP__
+#sigmac = 
+
+set samples 10000
+numeromis_in_intervallo(x) = floor(x/larghezza_intervallo)
+rounded(x) = larghezza_intervallo * ( numeromis_in_intervallo(x) + 0.5 )
+# (sqrt(2*_PI))
+gauss(x) = exp( (-1/2*((media-x)/sigmap)*((media-x)/sigmap) ) )/(sqrt(2*_PI)*sigmap)
+
+# set table './testtable'
+
+plot gauss(x)
+plot exp(-1/2*x**2)
+# plot "__NOMEFILE__" using (rounded($1)):(1) smooth frequency with boxes
+
+# unset table

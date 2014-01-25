@@ -1,0 +1,216 @@
+
+
+*******************************************************************************
+Sun Jan 12 14:19:10 2014
+
+
+FIT:    data read from './formatteddata/cronodolo.formdat'
+        format = z
+        #datapoints = 990
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1054.46           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.707107
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.00171558
+rel. change during last iteration : -3.99659e-12
+
+degrees of freedom    (FIT_NDF)                        : 988
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00131773
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.73642e-06
+
+BREAK:          Singular matrix in Invert_RtR
+
+
+
+*******************************************************************************
+Sun Jan 12 14:19:27 2014
+
+
+FIT:    data read from './formatteddata/4osc.formdat'
+        format = z
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 929.39            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.707107
+
+initial set of free parameter values
+
+a               = 2.03204
+b               = 1.001
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.348306
+rel. change during last iteration : -4.10035e-08
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.12306
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0151437
+
+BREAK:          Singular matrix in Invert_RtR
+
+
+
+*******************************************************************************
+Sun Jan 12 14:24:10 2014
+
+
+FIT:    data read from './formatteddata/4osc.formdat'
+        format = z
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1493.8            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.281884
+
+initial set of free parameter values
+
+s               = 1
+m               = 1
+
+After 37 iterations the fit converged.
+final sum of squares of residuals : 0.348306
+rel. change during last iteration : -4.67758e-08
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.12306
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0151437
+
+BREAK:          Singular matrix in Invert_RtR
+
+
+
+*******************************************************************************
+Sun Jan 12 14:25:01 2014
+
+
+FIT:    data read from './formatteddata/4osc.formdat' using 0:1
+        format = x:z
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.348306          delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 116.952
+
+initial set of free parameter values
+
+s               = 0.0490944
+m               = 1.001
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.348306
+rel. change during last iteration : -4.6378e-14
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.12306
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0151437
+
+BREAK:          Singular matrix in Invert_RtR
+
+
+
+*******************************************************************************
+Sun Jan 12 14:26:17 2014
+
+
+FIT:    data read from './formatteddata/1osc.formdat' using 0:1
+        format = x:z
+        #datapoints = 100
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3714.99           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 116.952
+
+initial set of free parameter values
+
+s               = 0.0490944
+m               = 1.002
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 0.761839
+rel. change during last iteration : -4.29326e-06
+
+degrees of freedom    (FIT_NDF)                        : 98
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0881696
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00777387
+
+BREAK:          Singular matrix in Invert_RtR
+
+
+
+*******************************************************************************
+Sun Jan 12 14:26:30 2014
+
+
+FIT:    data read from './formatteddata/cronodolo.formdat' using 0:1
+        format = x:z
+        #datapoints = 990
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.00420899        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 7.32107
+
+initial set of free parameter values
+
+s               = 0.196222
+m               = 1.003
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 0.00171558
+rel. change during last iteration : -1.18752e-07
+
+degrees of freedom    (FIT_NDF)                        : 988
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00131773
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.73642e-06
+
+BREAK:          Singular matrix in Invert_RtR
+
